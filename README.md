@@ -108,43 +108,43 @@ For example, `t.print();` will print in the Tree.
 
 To use this header file copy the below given code in your header file 
 ```
-#include"BST.h"
+#include"Avltree.h"
 ```
 
 Here is a brief description of all the functions available in this header file :
 
-### Step 1 : Create an Object of BST class and specify the data type in it :
+### Step 1 : Create an Object of AVL class and specify the data type in it :
 
-`BST<data_type> obj_name;`
+`AvlTree<data_type> obj_name;`
 
 For exmaple,
-`BST<char> obj3;` will create a BST in which each data will be of char type and object name is obj3. <br/> 
+`AvlTree<char> obj;` will create a AVL in which each data will be of char type and object name is 'obj'. <br/> 
 <br/>
-Now you can freely use obj3, i.e, object name to invoke all the functions. Let's have a look at all the functions which are available to us. <br/>
+Now you can freely use 'obj', i.e, object name to invoke all the functions. Let's have a look at all the functions which are available to us. <br/>
 <br/>
 
 #### > insert
-Inorder to insert any data in the binary search tree, follow this syntax :
+Inorder to insert any data in the AVL, follow this syntax :
 ```
 obj_name.insert(data);
 ```
-For example, `obj3.insert('D');` will insert D in the Binary Search Tree.
+For example, `obj.insert('D');` will insert D in the AVL.
 <br/>
 
 #### > search
-Inorder to check if any data in the BST, follow this syntax :
+Inorder to check if any data in the AVL, follow this syntax :
 ```
 obj_name.search(data);
 ```
-For example, `obj3.search('D');` will return 1 if it is present and 0 if it isn't present.
+For example, `obj.search('D');` will return 1 if it is present and 0 if it isn't present.
 <br/>
 
 #### > Delete
-Inorder to Delete any data in the binary tree, follow this syntax :
+Inorder to Delete any node in the AVL, follow this syntax :
 ```
-obj_name.Delete(data);
+obj_name.deleteNode(data);
 ```
-For example, `obj3.Delete('D');` will delete D from the Binary Search Tree.
+For example, `obj.deleteNode('D');` will delete D from the AVL.
 <br/>
 
 ### > Traversals 
@@ -168,3 +168,11 @@ For Example :
 ```
 This will print all traversals as per the name.
 <br/>
+#### > Print
+To print tree, follow this syntax :
+```
+obj_name.printTree();
+```
+For example, `t.printTree();` will print in the Tree.
+<br/>
+
