@@ -68,3 +68,29 @@ For Example :
 This will print all traversals as per the name.
 <br/>
 
+## Tree :
+
+To use this header file copy the below given code in your header file 
+```
+#include"Tree.h"
+```
+
+Here is a brief description of all the functions available in this header file :
+
+### Step 1 : Create an Object of tree class and specify the data type in it :
+
+`tree<data_type> obj_name;`
+
+For exmaple,
+`tree<char> t;` will create a tree in which each data will be of char type and object name is t. <br/> 
+<br/>
+Now you can freely use t, i.e, object name to invoke all the functions. Let's have a look at all the functions which are available to us. <br/>
+<br/>
+#### > Print
+To print in tree, follow this syntax :
+```
+obj_name.Print();
+```
+For example, `t.print();` will print in the Tree.
+<br/>
+
