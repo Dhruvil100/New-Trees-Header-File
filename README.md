@@ -37,3 +37,33 @@ obj_name.search(data);
 ```
 For example, `obj3.search('D');` will return 1 if it is present and 0 if it isn't present.
 <br/>
+
+#### > Delete
+Inorder to Delete any data in the binary tree, follow this syntax :
+```
+obj_name.Delete(data);
+```
+For example, `obj3.Delete('D');` will delete D from the Binary Search Tree.
+<br/>
+
+### Traversals 
+<br/>
+Syntax for various traversals :
+
+```
+obj_name.traversal_name();
+```
+For Example :
+
+```
+    obj3.LevelOrder();
+    cout<<endl;
+    obj3.preorder();
+    cout<<endl;
+    obj3.postorder();
+    cout<<endl;
+    obj3.inorder();
+    cout<<endl;
+```
+This will print all traversals as per the name.
+
