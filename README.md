@@ -12,7 +12,7 @@ To use this header file copy the below given code in your header file
 
 Here is a brief description of all the functions available in this header file :
 
-#### Step 1 : Create an Object of BST class and specify the data type in it :
+### Step 1 : Create an Object of BST class and specify the data type in it :
 
 `BST<data_type> obj_name;`
 
@@ -22,9 +22,18 @@ For exmaple,
 Now you can freely use obj3, i.e, object name to invoke all the functions. Let's have a look at all the functions which are available to us. <br/>
 <br/>
 
-###### insert
-Inorder to insert any data in the binary tree, follow this syntax :
+#### > insert
+Inorder to insert any data in the binary search tree, follow this syntax :
 ```
 obj_name.insert(data);
 ```
 For example, `obj3.insert('D');` will insert D in the Binary Search Tree.
+<br/>
+
+#### > search
+Inorder to check if any data in the BST, follow this syntax :
+```
+obj_name.search(data);
+```
+For example, `obj3.search('D');` will return 1 if it is present and 0 if it isn't present.
+<br/>
