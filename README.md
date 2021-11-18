@@ -82,16 +82,39 @@ Then, you can store it and print it, like :
  node<char>* val = obj3.Getsuccessor('C');
     cout<<val->data<<" \n";
 ```
+<br/>
 #### > Least Common Ancestor
 Inorder to get the least common ancestor of 2 nodes in the binary search tree, follow this syntax :
 ```
 obj_name.lca(node1, node2);
 ```
 For example, `obj3.lca('G', 'J');` will get least common anchestor of  G and J from the Binary Search Tree.
+Then, you can store it and print it, like :
+```
+ val = obj3.lca('G','J');
+ cout<<val->data<<" \n";
+```
+<br/>
+
+#### > BST from a sorted Array
+Inorder to get a BST from a sorted array, follow this syntax :
+```
+obj_name.sortedArrayToBST(array, start_index, end_index);
+```
+For example, `obj4.sortedArrayToBST(arr2,0,7);` will create a Binary Search Tree using a sorted array of 8 elements.
+<br/>
+
+#### > Copy
+Inorder to copy from a BST to another BST, follow this syntax :
+```
+obj_name_final.copy(sourceBST_name.my_root, 'A', 'Z');
+```
+For example, `obj5.copy(obj3.my_root,'A','Z');` will create a Binary Search Tree in 'obj5' using BST from 'obj3'.
 <br/>
 
 
 
+<br/>
 # Tree :
 
 To use this header file copy the below given code in your header file 
