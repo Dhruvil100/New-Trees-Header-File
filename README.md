@@ -46,8 +46,8 @@ obj_name.Delete(data);
 For example, `obj3.Delete('D');` will delete D from the Binary Search Tree.
 <br/>
 
-### Traversals 
-<br/>
+### > Traversals 
+
 Syntax for various traversals :
 
 ```
@@ -66,4 +66,5 @@ For Example :
     cout<<endl;
 ```
 This will print all traversals as per the name.
+<br/>
 
