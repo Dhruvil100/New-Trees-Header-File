@@ -70,6 +70,25 @@ For Example :
 This will print all traversals as per the name.
 <br/>
 
+#### > Get Successor
+Inorder to get any successor in the binary search tree, follow this syntax :
+```
+obj_name.getSuccessor(data);
+```
+For example, `obj3.getSuccessor('D');` will get successor of  D from the Binary Search Tree.
+<br/>
+Then, you can store it and print it, like :
+```
+ node<char>* val = obj3.Getsuccessor('C');
+    cout<<val->data<<" \n";
+```
+#### > Least Common Ancestor
+Inorder to get the least common ancestor of 2 nodes in the binary search tree, follow this syntax :
+```
+obj_name.lca(node1, node2);
+```
+For example, `obj3.lca('G', 'J');` will get least common anchestor of  G and J from the Binary Search Tree.
+<br/>
 
 
 
