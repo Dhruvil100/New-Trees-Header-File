@@ -27,6 +27,21 @@ BST(BST &obj){
     this->my_root = obj.my_root;
 }
 
+    vector<T3> vec;
+    void arrayFromBST(node<T3> *root){
+        if(root==NULL){
+            return;
+        }
+        arrayFromBST(root->left);
+        vec.push_back(root->data);
+        arrayFromBST(root->right);
+    }
+    vector<T3> get()
+    {   vec.clear();
+        arrayFromBST(my_root);
+        return vec;
+    } 
+    
 // template<typename T3>
 void copyutil(node<T3>* originalroot , vector<T3> &temp){
     // cout<<originalroot->data<<" ";
@@ -44,7 +59,6 @@ void copy(node<T3>* originalroot ,T3 min , T3 max){ //, node<T3>*& treeNew = my_
     if(originalroot ==NULL){
         return;
     }
-    // cout<<"Original root= "<<originalroot->data<<"\n";
     vector<T3> vec;
     // cout<<"copyutil\n";
     copyutil(originalroot ,vec);
@@ -52,10 +66,6 @@ void copy(node<T3>* originalroot ,T3 min , T3 max){ //, node<T3>*& treeNew = my_
     int n = vec.size();
     T3 arr[n];
     cout<<endl;
-    for(int i=0; i<n;i++){
-        arr[i] = vec[i];
-        cout<<vec[i]<<" ";
-    }
     cout<<endl;
     constructTree(arr,n,min,max); //my_root = 
     }
@@ -174,6 +184,18 @@ void postorder(node<T3>* root){
 void postorder(){
     postorder(my_root);
 }
+int count(node<T3>* root){
+        if(root == NULL){
+            return 0;
+        }
+        count+= (1+count(root->left));
+        count+= (1+count(root->right));
+        return count+1;
+    }
+
+    int count(){
+        return count(my_root);
+    }
 //---------------DELETION---------------------
 // template <typename T9>
 node<T3> *Delete(T3 data, node<T3>* root){ //REQUIRED AND DONE
@@ -212,6 +234,39 @@ node<T3> *Delete(T3 data, node<T3>* root){ //REQUIRED AND DONE
 void Delete(T3 data){
     my_root =  Delete(data, my_root);
 }
+
+
+    T3 parentt(node<T3> *root,T3 key,T3 parent){
+        if(root==NULL){
+            return T3(-1);
+        }
+
+        if(root->data==key){
+            return parent;
+        }
+        else{
+            T3 left = parentt(root->left,key,root->data);
+            T3 right = parentt(root->right,key,root->data);
+            if(left==T3(-1) && right==T3(-1)){
+                return -1;
+            }
+            else if(left==-1){
+                return right;
+            }
+            else{
+                return left;
+            }
+            
+        }
+    }
+
+    T3 parent(T3 key){
+        if(my_root->data == key){
+            cout<<"\nRoot node does not have a parent";
+            return T3(-1);
+        }
+        return parentt(my_root,key,T3(-1));
+    }
 
 
 //------------------INORDER SUCCESSOR--------------------------
